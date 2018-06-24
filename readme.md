@@ -1,8 +1,6 @@
 # CheatSheet
 
-Dev notes I often need.
-
-{:toc}
+Dev notes I often need. Visit at [cheatSheet.software](https://cheatsheet.software).
 
 ## Node
 
