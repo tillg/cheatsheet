@@ -1,4 +1,4 @@
-# myCheatSheet
+# CheatSheet
 
 Dev notes I often need.
 
