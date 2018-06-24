@@ -1,6 +1,6 @@
 # CheatSheet
 
-Dev notes I often need. Visit at [cheatSheet.software](https://cheatsheet.software).
+Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
 ## Node
 
