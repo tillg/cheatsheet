@@ -2,6 +2,8 @@
 
 Dev notes I often need.
 
+{:toc}
+
 ## Node
 
 ### JSHint
