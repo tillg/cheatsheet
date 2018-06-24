@@ -1,4 +1,4 @@
-# CheatSheet
+# cheatSheet
 
 Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
@@ -25,6 +25,7 @@ In order to code in ES6 and tell this JShint, add a comment at the top of the fi
 * [Returning Promise and/or callback](https://stackoverflow.com/questions/36837963/javascript-return-promise-and-or-call-callback): How to write a function that returns a promise and/or uses Callbacks
 * [Node's promisify and callbackify](https://medium.com/trabe/understanding-nodes-promisify-and-callbackify-d2b04efde0e0)
 * [Function decorators: Transforming callbacks into promises and back again, Joel Thoms, May 2017](https://hackernoon.com/transforming-callbacks-into-promises-and-back-again-e274c7cf7293): Explains how his own version of `promisify` and `callbackify` works.
+* [Dynamic Promise Chains](http://hellote.com/dynamic-promise-chains/): I haven't read it yet in details, but the title sounds promising for my use case.
 
 ### Files, writing / reading
 
