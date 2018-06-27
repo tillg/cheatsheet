@@ -2,6 +2,12 @@
 
 Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
+## Recent thoughts
+
+* Reason for my Promise problem could be
+  * Does every then function really return a promise?
+  * It could also be a problem with the index in the loops. See here http://hellote.com/dynamic-promise-chains/
+
 ## Node
 
 ### JSHint
