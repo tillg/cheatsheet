@@ -2,12 +2,6 @@
 
 Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
-## Recent thoughts
-
-* Reason for my Promise problem could be
-  * Does every then function really return a promise?
-  * It could also be a problem with the index in the loops. See here http://hellote.com/dynamic-promise-chains/
-
 ## Node
 
 ### JSHint
@@ -45,3 +39,7 @@ In order to code in ES6 and tell this JShint, add a comment at the top of the fi
 * Repeat last command with sudo: `sudo !!`
 * Background tasks: `<whatever command> &`
 * Execute a `.profile` so that the new settings become valid in the current shell: `source ~/.profile`
+
+## Recent thoughts, reading, things to try
+
+* [Build A Live Paint Application With React](https://codeburst.io/build-a-live-paint-application-with-react-ed534b403706): A thing I always wanted: Collaborative working on a board. May be this could be a starting point, and later we add a React-Native App on a large Android-powered touch screen...
