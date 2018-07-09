@@ -4,6 +4,14 @@ Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.softwar
 
 ## Node
 
+### Node Version Manager (NVM)
+
+To manage the different versions of Node it makes sense to use the Node version Manager (NVM). 
+
+* [`nvm` usage](https://github.com/creationix/nvm#usage)
+* [Checking the installed Node version as Jest test](https://gitlab.com/tillg/scrapeMachine/blob/master/test.js)
+
+
 ### JSHint
 
 In order to code in ES6 and tell this JShint, add a comment at the top of the file: `/* jshint esversion: 6 */` 
