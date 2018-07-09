@@ -31,6 +31,43 @@ In order to code in ES6 and tell this JShint, add a comment at the top of the fi
 
 * [How to write file if parent folder doesn't exist?](https://stackoverflow.com/questions/16316330/how-to-write-file-if-parent-folder-doesnt-exist) A thing I often needed...
 
+### Saving keys & passwords
+
+How and where do you save passwords or keys that your codes need to run? Especially if your code lives publicly in Github?
+
+Answer: Put your keys in an extra file that is not tracked in git (i.e. that is listed in your `.gitignore` file):
+
+`keys.js`:
+```javascript
+// add this file to .gitignore
+
+module.exports = {
+        google: {
+            clientID: 'enter your client id here',
+            clientSecret: 'enter your client secret here'
+        }
+};
+```
+
+And then use it in your code. An example:
+
+`passport-setup.js`:
+```javascript
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const keys = require('./keys');
+
+passport.use(
+    new GoogleStrategy({
+        // options for google strategy
+        clientID: keys.google.clientID,
+        clientSecret: keys.google.clientSecret
+    }, () => {
+        // passport callback function
+    })
+);
+```
+Taken from [this video](https://www.youtube.com/watch?v=7udDtgLs0ss&list=PL4cUxeGkcC9jdm7QX143aMLAqyM-jTZ2x&index=7) (or see in [this repo](https://github.com/iamshaunjp/oauth-playlist/tree/lesson-7/config)).
 
 ## Bash
 
