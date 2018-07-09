@@ -69,6 +69,10 @@ passport.use(
 ```
 Taken from [this video](https://www.youtube.com/watch?v=7udDtgLs0ss&list=PL4cUxeGkcC9jdm7QX143aMLAqyM-jTZ2x&index=7) (or see in [this repo](https://github.com/iamshaunjp/oauth-playlist/tree/lesson-7/config)).
 
+### `.gitignore`
+
+A sample `.gitignore` file is [here](dot.gitignore).
+
 ## Bash
 
 * Find a file somewhere on the disk: `sudo find / -name "*part-of-the-filename*.js"`
