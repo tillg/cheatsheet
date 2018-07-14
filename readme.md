@@ -34,6 +34,7 @@ In order to code in ES6 and tell this JShint, add a comment at the top of the fi
 * [Node's promisify and callbackify](https://medium.com/trabe/understanding-nodes-promisify-and-callbackify-d2b04efde0e0)
 * [Function decorators: Transforming callbacks into promises and back again, Joel Thoms, May 2017](https://hackernoon.com/transforming-callbacks-into-promises-and-back-again-e274c7cf7293): Explains how his own version of `promisify` and `callbackify` works.
 * [Dynamic Promise Chains](http://hellote.com/dynamic-promise-chains/)
+* [A comprehensive approach to promises](https://codeburst.io/playing-with-javascript-promises-a-comprehensive-approach-25ab752c78c3): Very good explanation about `.then` chaining
 
 ### Files, writing / reading
 
@@ -76,6 +77,37 @@ passport.use(
 );
 ```
 Taken from [this video](https://www.youtube.com/watch?v=7udDtgLs0ss&list=PL4cUxeGkcC9jdm7QX143aMLAqyM-jTZ2x&index=7) (or see in [this repo](https://github.com/iamshaunjp/oauth-playlist/tree/lesson-7/config)).
+
+### App formats: CLI and API based
+
+To make a CLI based app use [`commander.js`](https://github.com/tj/commander.js/): 
+```javascript
+const program = require('commander');
+// Require logic.js file and extract controller functions using JS destructuring assignment
+const { addContact, getContact } = require('./logic');
+
+program
+  .version('0.0.1')
+  .description('Contact management system');
+
+program
+  .command('addContact <firstame> <lastname> <phone> <email>')
+  .alias('a')
+  .description('Add a contact')
+  .action((firstname, lastname, phone, email) => {
+    addContact({firstname, lastname, phone, email});
+  });
+
+program
+  .command('getContact <name>')
+  .alias('r')
+  .description('Get contact')
+  .action(name => getContact(name));
+
+program.parse(process.argv);
+```
+
+See for a more complete guide [here](https://scotch-io.cdn.ampproject.org/v/s/scotch.io/amp/tutorials/build-an-interactive-command-line-application-with-nodejs?amp_js_v=0.1&usqp=mq331AQGCAEoATgB#origin=https%3A%2F%2Fwww.google.com.vn&prerenderSize=1&visibilityState=prerender&paddingTop=54&p2r=0&horizontalScrolling=0&csi=1&aoh=15312707752711&viewerUrl=https%3A%2F%2Fwww.google.com.vn%2Famp%2Fs%2Fscotch.io%2Famp%2Ftutorials%2Fbuild-an-interactive-command-line-application-with-nodejs)
 
 ### `.gitignore`
 
