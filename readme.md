@@ -22,10 +22,20 @@ In order to code in ES6 and tell this JShint, add a comment at the top of the fi
 * Very helpful: [The Object Explorer](https://sdras.github.io/object-explorer/) and [the Array Explorer](https://sdras.github.io/array-explorer/)
 * About [Getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) and [Setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) on Mozilla.
 
-### Logging with Winston
+### Logging
+
+Some Winston documents:
 
 * [Getting Started Quickly With Node.js Logging, April 2018, Erik Dietrich](https://blog.scalyr.com/2018/04/getting-started-quickly-node-js-logging/)
 * [The source of winston documentation: The winston Repo ;)](https://github.com/winstonjs/winston)
+
+In case you want to log JSON files to the console use [prettyjson](http://rafeca.com/prettyjson/).
+
+### Building a CLI
+
+* A good [article](https://scotch.io/tutorials/build-an-interactive-command-line-application-with-nodejs)
+* Use [commander.js](https://github.com/tj/commander.js/)
+
 
 ### Promises
 
@@ -35,6 +45,7 @@ In order to code in ES6 and tell this JShint, add a comment at the top of the fi
 * [Function decorators: Transforming callbacks into promises and back again, Joel Thoms, May 2017](https://hackernoon.com/transforming-callbacks-into-promises-and-back-again-e274c7cf7293): Explains how his own version of `promisify` and `callbackify` works.
 * [Dynamic Promise Chains](http://hellote.com/dynamic-promise-chains/)
 * [A comprehensive approach to promises](https://codeburst.io/playing-with-javascript-promises-a-comprehensive-approach-25ab752c78c3): Very good explanation about `.then` chaining
+* [ES6 Promises: Patterns and Anti-Patterns](https://medium.com/datafire-io/es6-promises-patterns-and-anti-patterns-bbb21a5d0918): Very good and helpful reading!
 
 ### Files, writing / reading
 
