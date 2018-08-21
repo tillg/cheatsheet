@@ -21,7 +21,7 @@ What Jonathan Mills suggests in [his course](https://app.pluralsight.com/library
 ```shell
 npm i eslint --save-dev
 
-eslint --init
+./node_modules/.bin/eslint --init
 > Use a populat style guide
 > Airbnb
 
@@ -98,6 +98,16 @@ Some Winston documents:
 * [The source of winston documentation: The winston Repo ;)](https://github.com/winstonjs/winston)
 
 In case you want to log JSON files to the console use [prettyjson](http://rafeca.com/prettyjson/).
+
+### Building Path names
+
+When building path names, don't use `+` to concatenate string, use the `path` module (it's integrated in node, no need to `npm install`, just `require` it).
+
+An example
+
+```javascript
+app.use(express.static(path.join(__dirname, 'public')));
+```
 
 ### Building a CLI
 
@@ -228,10 +238,43 @@ A sample `.gitignore` file for node projects is [here](dot.gitignore).
 
 ## .npmrc
 
-Have an `.npmr` file to set defaults for npm. Useful examples:
+Have an `.npmrc` file to set defaults for npm. Useful examples:
 
 * `save = true` saves a npm package everytime you install it with `npm install`. It's like you would always have the `--save` option on.
 * `save-exact = true` sets the default version to exact match. I.e. when you install express it would create a line in `package.json` with exact match: `"express": "4.16.3"`.
+
+## [nodemon](https://nodemon.io/)
+
+To **configure** `nodemon`, there 2 options:
+
+**`package.json`**: In the `package.json` file in an extra section labeled `"nodemonConfig"`:
+
+```json
+...
+"devDependecies": {
+  ...
+},
+"nodemonConfig": {
+  "restartable": "rs",
+  "ignore": ["node_modules/**/node_modules"],
+  "delay": "2500",
+  "verbose": true,
+  "env": {
+    "NODE-ENV": "development",
+    "PORT": 4000
+  }
+}
+```
+
+**Note:** The variables within the `env` section are passed in to node as environemnt variables and can be used inside your JS script like so:
+
+```javascript
+const port = process.env.PORT || 3000;
+```
+
+**`nodemon.json`** is the other place where you can configure nodemon. `nodemon.json` is the default file that nodemon is looking for, but you can pass any other filename as parameter to nodemon with the `--config` option.
+
+Restart nodemon without shutting it down and manually restarting it by typing `rs` and return (or whatever you have configured as `restartable`).)
 
 ## Bash
 
@@ -240,6 +283,20 @@ Have an `.npmr` file to set defaults for npm. Useful examples:
 * Repeat last command with sudo: `sudo !!`
 * Background tasks: `<whatever command> &`
 * Execute a `.profile` so that the new settings become valid in the current shell: `source ~/.profile`
+
+## VS Code
+
+Replace many same names in VS Code at the same time: Use `Command + F2`
+
+![Command + F2](vscode_command_f2.png)
+
+Format Document: Right-Click in the code and select `Format Document` in the pop-up-menu.
+
+### Extensions
+
+Extensions you might want to use:
+
+* **ESLint** is very helpful, when using ESLint  ;)  Just make sure you don't use any other Linting tools at the same time, i.e. _JSHint_, Java Script standard Linter etc.
 
 ## Recent thoughts, reading, things to try
 
