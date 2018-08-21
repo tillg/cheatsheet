@@ -2,7 +2,7 @@
 
 Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
-{:toc}
+{% include toc.html html=content %}
 
 ## Node
 
@@ -30,7 +30,7 @@ In order to code in ES6 and tell this JShint, add a comment at the top of the fi
 
 My current chosen tool for logging / debugging is `debug`. 
 
-Using debug:
+Using `debug`:
 
 Install and require `chalk` and `debug` : `npm i chalk debug`
 
