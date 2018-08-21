@@ -12,9 +12,32 @@ To manage the different versions of Node it makes sense to use the Node version 
 * [Checking the installed Node version as Jest test](https://gitlab.com/tillg/scrapeMachine/blob/master/test.js)
 
 
-### JSHint
+### Linting
 
-In order to code in ES6 and tell this JShint, add a comment at the top of the file: `/* jshint esversion: 6 */` 
+For linitng I use [ESLint](https://eslint.org/) as it seems to be the standard.
+
+What Jonathan Mills suggests in [his course](https://app.pluralsight.com/library/courses/nodejs-express-web-applications-update/table-of-contents):
+
+```shell
+npm i eslint --save-dev
+
+eslint --init
+> Use a populat style guide
+> Airbnb
+
+## To run it:
+./node_modules/.bin/eslint app.js
+
+## To fix problems automagically:
+./node_modules/.bin/eslint --fix app.js 
+
+## Create a script in your package.json:
+"lint": "eslint app.js"
+## and run it:
+npm run lint
+```
+
+
 
 ### JS, OOP and the sort
 
@@ -205,7 +228,7 @@ A sample `.gitignore` file for node projects is [here](dot.gitignore).
 
 ## .npmrc
 
-Having a `.npmr` file sets defaults. Usefull examples:
+Have an `.npmr` file to set defaults for npm. Useful examples:
 
 * `save = true` saves a npm package everytime you install it with `npm install`. It's like you would always have the `--save` option on.
 * `save-exact = true` sets the default version to exact match. I.e. when you install express it would create a line in `package.json` with exact match: `"express": "4.16.3"`.
@@ -220,4 +243,5 @@ Having a `.npmr` file sets defaults. Usefull examples:
 
 ## Recent thoughts, reading, things to try
 
+* [Building Web Applications with Node JS and Express 4.0 (Update)](https://app.pluralsight.com/library/courses/nodejs-express-web-applications-update/table-of-contents) (Make sure you get the course with the **(Update)**!): A great tutorial with lost of helpful tips for setting up a dev environment, configuring npm/eslint and the sort.
 * [Build A Live Paint Application With React](https://codeburst.io/build-a-live-paint-application-with-react-ed534b403706): A thing I always wanted: Collaborative working on a board. May be this could be a starting point, and later we add a React-Native App on a large Android-powered touch screen...
