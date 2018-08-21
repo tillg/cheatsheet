@@ -165,9 +165,33 @@ program.parse(process.argv);
 
 See for a more complete guide [here](https://scotch-io.cdn.ampproject.org/v/s/scotch.io/amp/tutorials/build-an-interactive-command-line-application-with-nodejs?amp_js_v=0.1&usqp=mq331AQGCAEoATgB#origin=https%3A%2F%2Fwww.google.com.vn&prerenderSize=1&visibilityState=prerender&paddingTop=54&p2r=0&horizontalScrolling=0&csi=1&aoh=15312707752711&viewerUrl=https%3A%2F%2Fwww.google.com.vn%2Famp%2Fs%2Fscotch.io%2Famp%2Ftutorials%2Fbuild-an-interactive-command-line-application-with-nodejs)
 
+### Express
+
+When using [Express](https://expressjs.com/) a very helpful middleware to use is [morgan](https://github.com/expressjs/morgan): It logs all HTTP requests.
+
+To use morgan:
+
+Install and require it:
+
+```shell
+npm i morgan
+```
+
+In your code:
+
+```javascript
+const express = require('express');
+const morgan = require('morgan');
+...
+let app = express();
+app.use(morgan('tiny'));
+```
+
+And up you are with a nice logging of your HTTP requests.
+
 ### `.gitignore`
 
-A sample `.gitignore` file is [here](dot.gitignore).
+A sample `.gitignore` file for node projects is [here](dot.gitignore).
 
 ## npm
 
