@@ -24,6 +24,45 @@ In order to code in ES6 and tell this JShint, add a comment at the top of the fi
 
 ### Logging
 
+#### Debug
+
+My current chosen tool for logging / debugging is `debug`. 
+
+Using debug:
+
+1. Install and require `chalk` and `debug` : `npm i chalk debug`
+2. In your code: 
+ ```javascript
+ var chalk = require('chalk');
+ var debug = require('debug')('app');
+ ```
+ 
+3. The `('app')` behind the require indicates the name of your module / file. You can structure your debugging scopes by using `:` like so:
+
+ ```javascript
+ var debug = require('debug')('app:routes');
+ ```
+4. Use `debug` statement to log:
+
+ ```javascript
+ app.listen(3000, function(){
+   debug(`Listening on port ${chalk.green('3000')}`);
+ })
+ ```
+
+5. Activate debugging when launching the node environment by passing the `DEBUG` environment variable (ideally as an npm script :) ):
+
+ ```
+DEBUG=* node app.js
+or
+DEBUG=app:*,express:* node app.js
+ ```
+
+
+
+#### Winston
+{% include note.html content="I used to use winston as logging tool but plan to move to dubug instead as it is smaller & simpler." %}
+
 Some Winston documents:
 
 * [Getting Started Quickly With Node.js Logging, April 2018, Erik Dietrich](https://blog.scalyr.com/2018/04/getting-started-quickly-node-js-logging/)
@@ -123,6 +162,23 @@ See for a more complete guide [here](https://scotch-io.cdn.ampproject.org/v/s/sc
 ### `.gitignore`
 
 A sample `.gitignore` file is [here](dot.gitignore).
+
+## npm
+
+### Versioning
+
+| Symbol    | Explanation                                               | Example                                                                          |
+| --------- | --------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| ~ (tilde) | Matches the most recent minor version (the middle number) | ~1.2.3 matches 1.2.x but will miss 1.3.0.                                        |
+| ^ (caret) | Matches most recent major version                         | ^1.2.3 will match any 1.x.x release including 1.3.0, but will hold off on 2.0.0. |
+| No symbol | Exact version match (all numbers)                         | 1.2.3 matches only 1.2.3                                                         |
+
+## .npmrc
+
+Having a `.npmr` file sets defaults. Usefull examples:
+
+* `save = true` saves a npm package everytime you install it with `npm install`. It's like you would always have the `--save` option on.
+* `save-exact = true` sets the default version to exact match. I.e. when you install express it would create a line in `package.json` with exact match: `"express": "4.16.3"`.
 
 ## Bash
 
