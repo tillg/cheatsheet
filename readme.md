@@ -2,8 +2,6 @@
 
 Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
-{% include toc.html html=content %}
-
 ## Node
 
 ### Node Version Manager (NVM)
