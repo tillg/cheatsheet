@@ -61,7 +61,12 @@ DEBUG=app:*,express:* node app.js
 
 
 #### Winston
-{% include note.html content="I used to use winston as logging tool but plan to move to dubug instead as it is smaller & simpler." %}
+
+----
+
+**Note** I used to use winston as logging tool but plan to move to dubug instead as it is smaller & simpler.
+
+----
 
 Some Winston documents:
 
