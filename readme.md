@@ -2,6 +2,8 @@
 
 Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
+{:toc}
+
 ## Node
 
 ### Node Version Manager (NVM)
@@ -30,19 +32,22 @@ My current chosen tool for logging / debugging is `debug`.
 
 Using debug:
 
-1. Install and require `chalk` and `debug` : `npm i chalk debug`
-2. In your code: 
+Install and require `chalk` and `debug` : `npm i chalk debug`
+
+In your code:
+
  ```javascript
  var chalk = require('chalk');
  var debug = require('debug')('app');
  ```
- 
-3. The `('app')` behind the require indicates the name of your module / file. You can structure your debugging scopes by using `:` like so:
+
+The `('app')` behind the require indicates the name of your module / file. You can structure your debugging scopes by using `:` like so:
 
  ```javascript
  var debug = require('debug')('app:routes');
  ```
-4. Use `debug` statement to log:
+
+Use `debug` statement to log:
 
  ```javascript
  app.listen(3000, function(){
@@ -50,15 +55,13 @@ Using debug:
  })
  ```
 
-5. Activate debugging when launching the node environment by passing the `DEBUG` environment variable (ideally as an npm script :) ):
+Activate debugging when launching the node environment by passing the `DEBUG` environment variable (ideally as an npm script :) ):
 
- ```
+```shell
 DEBUG=* node app.js
 or
 DEBUG=app:*,express:* node app.js
  ```
-
-
 
 #### Winston
 
