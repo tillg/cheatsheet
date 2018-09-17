@@ -2,6 +2,9 @@
 
 Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
 ## Node
 
 ### Node Version Manager (NVM)
@@ -300,5 +303,6 @@ Extensions you might want to use:
 
 ## Recent thoughts, reading, things to try
 
+* [Getting a server with CRUD REST function up and running in a minute ;)](https://github.com/typicode/json-server)
 * [Building Web Applications with Node JS and Express 4.0 (Update)](https://app.pluralsight.com/library/courses/nodejs-express-web-applications-update/table-of-contents) (Make sure you get the course with the **(Update)**!): A great tutorial with lost of helpful tips for setting up a dev environment, configuring npm/eslint and the sort.
 * [Build A Live Paint Application With React](https://codeburst.io/build-a-live-paint-application-with-react-ed534b403706): A thing I always wanted: Collaborative working on a board. May be this could be a starting point, and later we add a React-Native App on a large Android-powered touch screen...
