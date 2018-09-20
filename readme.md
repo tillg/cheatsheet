@@ -40,13 +40,12 @@ npm i eslint --save-dev
 npm run lint
 ```
 
-
-
 ### JS, OOP and the sort
 
 * [OOP in JS on Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
 * Very helpful: [The Object Explorer](https://sdras.github.io/object-explorer/) and [the Array Explorer](https://sdras.github.io/array-explorer/)
 * About [Getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) and [Setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) on Mozilla.
+* A nice roundup explanation of [Node Modules, ES6, require...](https://stackabuse.com/how-to-use-module-exports-in-node-js/)
 
 ### Logging
 
