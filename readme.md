@@ -40,6 +40,8 @@ npm i eslint --save-dev
 npm run lint
 ```
 
+In order to use `eslint` together with the code formatter `prettier`, follow [this guide](https://blog.gojekengineering.com/eslint-prettier-for-a-consistent-react-codebase-eaa673debb1d).
+
 ### JS, OOP and the sort
 
 * [OOP in JS on Mozilla](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
@@ -237,6 +239,8 @@ A sample `.gitignore` file for node projects is [here](dot.gitignore).
 | ~ (tilde) | Matches the most recent minor version (the middle number) | ~1.2.3 matches 1.2.x but will miss 1.3.0.                                        |
 | ^ (caret) | Matches most recent major version                         | ^1.2.3 will match any 1.x.x release including 1.3.0, but will hold off on 2.0.0. |
 | No symbol | Exact version match (all numbers)                         | 1.2.3 matches only 1.2.3                                                         |
+## npx
+Use `npx` to execute commands of locally installed modules. Nicely explained in [this article](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b?_branch_match_id=525988988440808464).
 
 ## .npmrc
 
