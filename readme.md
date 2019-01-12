@@ -2,8 +2,21 @@
 
 Dev notes I often need. Visit at [cheatSheet.software](http://cheatsheet.software).
 
-
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+* [cheatSheet](#cheatsheet)
+	* [Node](#node)
+		* [Node Version Manager (NVM)](#node-version-manager-nvm)
+		* [Linting](#linting)
+		* [JS, OOP and the sort](#js-oop-and-the-sort)
+			* [Destructuring & default values](#destructuring-default-values)
+			* [Optional chaining](#optional-chaining)
+		* [Logging](#logging)
+			* [Debug](#debug)
+
+<!-- /code_chunk_output -->
 
 ## Node
 
@@ -48,6 +61,41 @@ In order to use `eslint` together with the code formatter `prettier`, follow [th
 * Very helpful: [The Object Explorer](https://sdras.github.io/object-explorer/) and [the Array Explorer](https://sdras.github.io/array-explorer/)
 * About [Getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) and [Setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) on Mozilla.
 * A nice roundup explanation of [Node Modules, ES6, require...](https://stackabuse.com/how-to-use-module-exports-in-node-js/)
+
+#### Destructuring & default values
+The old way:
+```javascript
+const result = axios.get(`https://ironhack-pokeapi.herokuapp.com/pokemon/${entry.id}`)
+const data = result.data
+```
+
+Destructured:
+```javascript
+const { data } = await axios.get(...)
+
+// With renaming the varaible:
+const { data: newData } = await axios.get(...)
+```
+
+Destructuring and setting default values:
+```javascript
+const { id = 5 } = {}
+```
+This can also be used as function params:
+```javascript
+function calculate({operands = [1, 2], type = 'addition'} = {}) {...}
+```
+
+#### Optional chaining
+The old way:
+```javascript
+let data
+if(myObj && myObj.firstProp && myObj.firstProp.secondProp && myObj.firstProp.secondProp.actualData) data = myObj.firstProp.secondProp.actualData
+```
+The new way:
+```javascript
+const data = myObj?.firstProp?.secondProp?.actualData
+```
 
 ### Logging
 
